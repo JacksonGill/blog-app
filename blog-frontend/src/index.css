@@ -3,15 +3,15 @@
   border: 3px solid red;
   background-color: grey;
   color: red;
-  padding: 10px;
-  font-size: 30px;
+  padding: 6px;
+  font-size: 20px;
 }
 
 .success {
   border: 3px solid green;
   background-color: grey;
   color: green;
-  padding: 10px;
-  font-size: 30px;
+  padding: 6px;
+  font-size: 20px;
 }
 
