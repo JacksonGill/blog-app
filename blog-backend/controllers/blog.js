@@ -65,11 +65,12 @@ blogRouter.delete('/:id', async (request, response) => {
     return response.status(400).json({ error: 'must be the creator of the blog to delete' })
   }
 
-  await Blog.findByIdAndDelete(request.params.id)
-  response.status(204).end()
+  const deletedBlog = await Blog.findByIdAndDelete(request.params.id)
+  response.json(deletedBlog)
 })
 
 blogRouter.put('/:id', async (request, response) => {
+  
   const body = request.body
 
   const blog = {...body, likes: body.likes}
